@@ -14,10 +14,10 @@ def editar(colaborador):
             lista_de_colaboradores[i]= colaborador
 
 #Excluir um colaborador.
-def excluir(colaborador):
+def excluir(id_colaborador):
     for index in range(0,len(lista_de_colaboradores)):
         colaborador_atual = lista_de_colaboradores[index]
-        if colaborador.id == colaborador_atual.id:
+        if id_colaborador == colaborador_atual.id:
             del lista_de_colaboradores[index]
             return
 #Lista todos os colaboradores.
