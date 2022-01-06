@@ -3,5 +3,5 @@ class Projeto():
         self.id = id 
         self.nome = nome
         self.descricao = descricao
-    def imprimir(self):
+    def print(self):
         print(f'{self.id}-{self.nome}-{self.descricao}')

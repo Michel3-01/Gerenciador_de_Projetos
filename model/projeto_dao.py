@@ -17,4 +17,4 @@ def excluir(id_projeto):
             return
 def listarProjetos():
     for projetos in lista_projetos:
-        projetos.imprimir()
+        projetos.print()
