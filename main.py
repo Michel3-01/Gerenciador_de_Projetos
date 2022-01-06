@@ -33,7 +33,7 @@ funções_colaborador.listaTodos()
 #excluir(colaborador)
 #listaTodos()
 index = 8
-novo_projeto = Projeto(index,'Aprender inglês','Aprender a lingua inglesa, pois isso ajudará a consiguir vagas no mercado de trabalho.')
+novo_projeto = Projeto(index,'Aprender inglês','Aprender a lingua inglesa, bla bla bla.')
 novo_projeto01 = Projeto(9,'blabla',"bla bla bla")
 funções_projeto.adicionar(novo_projeto01)
 funções_projeto.adicionar(novo_projeto)
