@@ -1,7 +1,5 @@
 #Lista que irá armazena as tarefas.
 
-
-lista_colaborador_tarefa = []
 lista_tarefas = []
 #Adicionar um tarefa.
 def adicionar(nova_tarefa):
@@ -28,19 +26,7 @@ def editar(tarefa):
 def listarTarefas():
     for tarefa in lista_tarefas:
         tarefa.print()
-def adicionar_colaboradores(id_tarefa,colaborador):
-    for index in range(0,len(lista_tarefas)):
-        tarefa_atual = lista_tarefas[index]
-        if id_tarefa == tarefa_atual.id:
-            lista_colaborador_tarefa.append(colaborador)
-            
-def listaColaboradoresTarefa(id_tarefa):
-    for index in range(0,len(lista_tarefas)):
-        tarefa_atual = lista_tarefas[index]
-        if id_tarefa == tarefa_atual.id:
-            for colaboradores in lista_colaborador_tarefa:
-                colaboradores.print()
-                
+
 
 
 
