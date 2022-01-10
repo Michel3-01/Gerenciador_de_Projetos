@@ -6,12 +6,13 @@ from model.projeto import Projeto
 import model.projeto_dao as funções_projeto
 import model.tabela_dao as funções_tarefas
 from model.tarefa import Tarefa
-
+from model.colaborador_tarefa import ColaboradoresTarefa
+import model.colaborador_tarefa_dao as funções_colaborador_tarefa
 #app = QApplication(sys.argv)
 #window = MainWindow()
 #window.show()
 #sys.exit(app.exec())
-for i in range(0,10):   
+for i in range(0,3):   
     novo_colaborador= Colaborador(i,f'Colaborador{i}','Almeida@gmail.com')
     funções_colaborador.adicionar(novo_colaborador)
 print(40*"-")
@@ -50,16 +51,31 @@ funções_projeto.listarProjetos()
 print("Nenhum projeto encontrado.")
 
 print("Adicionando uma colaborador a uma tarefa")
-for x in range(0,10):
+for x in range(0,3):
     nova_tarefa = Tarefa(x,"bla bla bla","Concluído")
     funções_tarefas.adicionar(nova_tarefa)
 
+for x in range(0,3):
+    novo_projeto = Projeto(x,f'Projeto{x}','Descrição{x}')
+    funções_projeto.adicionar(novo_projeto)
+
+funções_projeto.listarProjetos()
 funções_tarefas.listarTarefas()
 colaborador = Colaborador(1,'michele',"Almeida@gmeil.com")
-colaborador01 = Colaborador(1,'João',"Joãosilva45@gmail.com")
-funções_tarefas.adicionar_colaboradores(1,colaborador)
-funções_tarefas.adicionar_colaboradores(1,colaborador01)
-funções_tarefas.listaColaboradoresTarefa(1)
+#colaborador01 = Colaborador(1,'João',"Joãosilva45@gmail.com")
+#funções_tarefas.adicionar_colaboradores(1,colaborador)
+#funções_tarefas.adicionar_colaboradores(1,colaborador01)
+#funções_tarefas.listaColaboradoresTarefa(1)
+print("Lista de colaboradores por tarefa")
+pegar_colaborador = funções_colaborador.getColaborador(1)
+pegar_projeto = funções_projeto.pegarProjeto(1)
+pegar_tarefa = funções_tarefas.PegarTarefa(2)
+colaborador_tarefa = ColaboradoresTarefa(pegar_projeto,pegar_tarefa,pegar_colaborador)
+print("Adicionando colaborado.")
+funções_colaborador_tarefa.adicionar_colaboradores(1,colaborador_tarefa)
+
+funções_colaborador_tarefa.listaColaboradoresTarefa(1)
+
 
 
 
