@@ -70,7 +70,7 @@ print("Lista de colaboradores por tarefa")
 pegar_colaborador = funções_colaborador.getColaborador(1)
 pegar_projeto = funções_projeto.pegarProjeto(1)
 pegar_tarefa = funções_tarefas.PegarTarefa(2)
-colaborador_tarefa = ColaboradoresTarefa(pegar_projeto,pegar_tarefa,pegar_colaborador)
+colaborador_tarefa = ColaboradoresTarefa(pegar_projeto.print(),pegar_tarefa,pegar_colaborador)
 print("Adicionando colaborado.")
 funções_colaborador_tarefa.adicionar_colaboradores(1,colaborador_tarefa)
 

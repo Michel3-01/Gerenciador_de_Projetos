@@ -1,6 +1,10 @@
 #Adicionar um novo colaborador.
 lista_de_colaboradores = []#Amazena os dados do colaborador.
 def adicionar(novo_colaborador):
+    #Inserir o ID do cliente.
+    novo_id = len(lista_de_colaboradores)+1
+    novo_colaborador.id = novo_id
+    #Inserir o colaborador na lista.
     lista_de_colaboradores.append(novo_colaborador)
 #Editar informações do colaborador.
 def getColaborador(id):

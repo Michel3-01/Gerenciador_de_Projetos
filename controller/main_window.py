@@ -19,10 +19,10 @@ class MainWindow(QMainWindow):
         self.colaborador_btn.clicked.connect(self.show_colaborador)
 
     def show_projeto(self):
-        self.painel_principal.setCurrentIndex(0)
+        self.painel_principal.setCurrentIndex(1)
 
     def show_colaborador(self):
-        self.painel_principal.setCurrentIndex(1)
+        self.painel_principal.setCurrentIndex(0)
 
         
 
