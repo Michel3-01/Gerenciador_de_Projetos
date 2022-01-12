@@ -21,7 +21,7 @@ class ColaboradorPage(QWidget):
         email = self.campo_email.text()
 
         #Cria o objeto
-        novo_colaborador = Colaborador(None,nome,email)
+        novo_colaborador = Colaborador(0,nome,email)
         funções_colaborador.adicionar(novo_colaborador)
         funções_colaborador.listaTodos()
 

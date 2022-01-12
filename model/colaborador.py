@@ -5,3 +5,5 @@ class Colaborador():
         self.email= email
     def print(self):
         print(f'{self.id}, {self.nome} ,{self.email}')
+    def get_colaborador(self):
+        return[self.nome, self.email]
